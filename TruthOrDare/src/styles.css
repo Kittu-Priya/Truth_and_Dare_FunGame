@@ -642,7 +642,7 @@ button:active {
 }
 
 /* Add Player Form Styles */
-.add-player-form {
+/* .add-player-form {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
@@ -674,6 +674,60 @@ button:active {
 
 .add-player-btn:hover {
   background-color: #05B589 !important;
+} */
+
+.game-controls {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-player-btn {
+  background-color: var(--accent) !important;
+  margin-bottom: 10px;
+}
+
+.add-player-btn:hover {
+  background-color: #05B589 !important;
+}
+
+.add-player-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.add-player-form input {
+  padding: 12px;
+  border: 2px solid var(--secondary);
+  border-radius: 8px;
+  width: 200px;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.add-player-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.error-screen {
+  text-align: center;
+  padding: 30px;
+  color: var(--dark);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.error-screen h2 {
+  margin-bottom: 20px;
+  color: #EF476F;
 }
 
 @media (max-width: 768px) {
