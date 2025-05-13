@@ -205,6 +205,25 @@ export default function GameScreen({ players, onGameEnd }) {
     setSelectedOption(null);
   };
 
+  // Add this to your WinnerScreen component
+useEffect(() => {
+  const createConfetti = () => {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.left = `${Math.random() * 100}%`;
+    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    document.querySelector('.winner-screen').appendChild(confetti);
+    
+    setTimeout(() => {
+      confetti.remove();
+    }, 5000);
+  };
+
+  const interval = setInterval(createConfetti, 100);
+  return () => clearInterval(interval);
+}, []);
+
   // Add validation in the render section
   if (!currentPlayer) {
     return (
